@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &145935382721606222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 145935382721606208}
+  - component: {fileID: 145935382721606209}
+  m_Layer: 0
+  m_Name: MapGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &145935382721606208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145935382721606222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.8142204, y: -1.5257725, z: 7.068532}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &145935382721606209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145935382721606222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f64001d56d04084181d26eea0c1c308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 0}
+  maps:
+  - mapSize:
+      x: 50
+      y: 50
+    noiseScale: 90
+    octaves: 4
+    persistence: 0.995
+    lacunarity: 2
+    offset: {x: 0, y: 0}
+    tileHeightCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.05064392
+        value: 0.10681152
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.35066247
+        value: 0.15621233
+        inSlope: 0.1291438
+        outSlope: 0.1291438
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.0728218
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.84415674
+        value: 1.2881398
+        inSlope: 4.333456
+        outSlope: 4.333456
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.25874084
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1.9795938
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1.0856818
+        value: 1.9912133
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    seed: 0
+    heightMultiplier: 0.094
+    foliageRate: 0.1
+  mapIndex: 0
+  autoUpdate: 1
+  regions:
+  - name: Snow
+    terrainHeight: 20
+    tile: {fileID: 11400000, guid: eaa06c800cb666f45946767f8feee29b, type: 2}
+    Foliage: []
+  - name: Stone
+    terrainHeight: 13
+    tile: {fileID: 11400000, guid: 3892ef495ce6ce448b9c0bba55d5fb22, type: 2}
+    Foliage: []
+  - name: Grass
+    terrainHeight: 8
+    tile: {fileID: 11400000, guid: bd58cc7be1c05c049a2c473edcd526fa, type: 2}
+    Foliage:
+    - name: Tree
+      cumulativeWeight: 10
+      tile: {fileID: 11400000, guid: cef8785c52267754d9fc45cc7b72e403, type: 2}
+  - name: Sand
+    terrainHeight: 2
+    tile: {fileID: 11400000, guid: ebd4e405c4582c749bbcf0d3633bb033, type: 2}
+    Foliage: []
+  - name: Water
+    terrainHeight: 1
+    tile: {fileID: 11400000, guid: 46d8b0a771be8d84bb51327f62c5d00d, type: 2}
+    Foliage: []
